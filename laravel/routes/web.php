@@ -11,6 +11,45 @@
 |
 */
 
+ 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('test', function () {
+        return view('test');
+    });
+        
+
+Route::get('user/{name}', function ($name) {
+       return "Hello".$name ;
+    })->where('name', '[A-Za-z]+');
+    
+    
+
+Route::get('login', 'Auth\LoginController@test');
+
+Route::get('profile', [
+    'middleware' => 'App\Http\Middleware\Auth',
+    'uses' => 'Controller@test'
+]);
+
+Route::get('artisan', function () {
+    echo '<br>init migrate:...';
+    Artisan::call('make:migration', ['name' => 'user']);
+    echo 'done migrate:install';
+});
+ 
+ 
+
+
+
+
+
+
+
+
+
+
