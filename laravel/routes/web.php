@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('test', function () {
+Route::get('testview', function () {
         return view('test');
     });
         
@@ -43,8 +43,7 @@ Route::get('artisan', function () {
 });
  
  
-
-
+Route::get('test/{id}', 'TestController@show');
 
 
 
