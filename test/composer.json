@@ -1,0 +1,13 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Stack Builder\\Test\\" : "src"
+		}
+	},
+	"name" : "stack builder/test",
+	"require" : {
+		"piece/stagehand-testrunner" : "4.2.0",
+		"phpunit/phpunit" : "5.5.*",
+		"sebastian/version" : "1.0.6"
+	}
+}
