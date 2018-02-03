@@ -16,10 +16,10 @@ class LuhnTest extends TestCase
      */
     public function testValid()
     {
-        $this->assertEquals(Luhn::isValidLuhn(4012888888881881), TRUE);
+       $this->assertEquals(Luhn::isValidLuhn(182), TRUE);
        
-    }
-    
+    }     
+       
     
     
     /**
@@ -27,9 +27,9 @@ class LuhnTest extends TestCase
      */
     public function testNotValid()
     {
-        $this->assertEquals(Luhn::isValidLuhn(4012888888881882), FALSE);
+      $this->assertEquals(Luhn::isValidLuhn(1114), FALSE);
         
-    }
+    }  
     
     
     

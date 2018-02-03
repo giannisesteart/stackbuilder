@@ -24,14 +24,11 @@ class Luhn
         for ($i = $length - 1; $i >= 0; $i --) {
             
             // Double the value of every second digit beginning from the right
-            // use %2 to decide 
-            // $decide = ($length %2 ==0)?($i%2==0):(($i+1)%2 ==0);
-            // if you wish the second at first [1,2,3]--> [2]
+            //  the second at first [1,2,3]--> [2]
+            // [1,2] -->1 
             
-            $decide = ($i%2==0);
-           
+            $decide = ($length %2 ==0)?($i%2==0):(($i+1)%2 ==0);
             if ($decide) {
-              
                 $product = intval ( $number[$i]) * 2;
                 if ($product > 9) {
                     $product = array_sum(str_split($product));
@@ -41,6 +38,7 @@ class Luhn
             }
             $sum += $product;
         }
+        
         return $sum;
     }
 
@@ -63,6 +61,6 @@ class Luhn
     }
 } // end class Luhn
 
-Luhn::isValidLuhn(141);
+   
 
 ?> 
