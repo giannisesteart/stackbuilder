@@ -1,6 +1,6 @@
  
 <?php
-// test PHPUNIT
+// Test for PHPUNIT 
 // Makegood evaluation
 
 
@@ -12,18 +12,18 @@ class LuhnTest extends TestCase
 {
  
     /**
-     * test Valid
+     * test Valid 
      */
     public function testValid()
     {
        $this->assertEquals(Luhn::isValidLuhn(182), TRUE);
        
     }     
-       
+         
     
     
     /**
-     * test not Valid
+     * test not Valid 
      */
     public function testNotValid()
     {

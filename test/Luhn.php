@@ -2,7 +2,7 @@
 <?php
 /*  
  * Class Luhn impements the luhn allgorithm
- * The original implementation at Github
+ * The original implementation is at  Github
  * Version 1.0
  */
 
@@ -44,7 +44,7 @@ class Luhn
 
     /**
      * IS Valid check.
-     *
+     * 
      * @param int|string $number
      *
      */
@@ -58,7 +58,7 @@ class Luhn
             print("the credit card number is not valid!!");
             return FALSE;
         }
-    }
+    }   
 } // end class Luhn
 
    
